@@ -87,7 +87,7 @@ if __name__ == '__main__':
 
     # optional arguments
     parser.add_argument('-test', action="store_true", help='test mode (no change applied)')
-    parser.add_argument('-env', type=str, nargs=1, help='Sumo Logic Environment (default: "us2")')
+    parser.add_argument('-env', type=str, nargs=1, help='Sumo Logic Environment (default: us1)')
     parser.add_argument('-tag', type=str, nargs=1, help='new TAG to apply')
     parser.add_argument('-comment', type=str, nargs=1, help='new COMMENT to apply')
     parser.add_argument('-status', type=str, nargs=1, help='new STATUS to apply')
