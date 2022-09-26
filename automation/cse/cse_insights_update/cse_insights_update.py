@@ -103,7 +103,7 @@ if __name__ == '__main__':
     if args.env:
         SUMO_API_URL =  "https://api.{}.sumologic.com/api/".format(args.env[0])
     else:
-        SUMO_API_URL =  "https://api.us2.sumologic.com/api/"
+        SUMO_API_URL =  "https://api.sumologic.com/api/"
 
     # Insights configuration
     INSIGHTS_FILTER = args.filter[0] 
