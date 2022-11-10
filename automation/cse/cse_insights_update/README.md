@@ -29,7 +29,12 @@ python3 cse_insights_update.py -accessid XXXXX -accesskey XXXXX -filter '-status
 python3 cse_insights_update.py -accessid XXXXX -accesskey XXXXX -filter '-status:"closed" -tag:"CUSTOM"' -tag 'NEWTAG'
 ```
 
-## Close as "No Action" all non-closed insights with tag CUSTOM, Add tag NEWTAG, add comment, in us2 environment
+## Using the us2 endpoint, close all non-closed insights with tag CUSTOM with resolution "No Action", Add tag NEWTAG, add comment, in us2 environment
 ```
 python3 cse_insights_update.py -env=us2 -accessid XXXXX -accesskey XXXXX -filter '-status:"closed" +tag:"CUSTOM"' -tag 'NEWTAG' -comment 'NEWCOMMENT' -status 'closed' -resolution 'No Action'
+```
+
+## Close all non-closed insights as duplicates (e.g. alert flood)
+```
+python3 cse_insights_update.py -accessid XXXXX -accesskey XXXXX -filter '-status:"closed" -tag:"CUSTOM"' -comment 'Valid traffic that has since been tuned out. Closing out.' -status 'closed' -resolution 'Duplicate'
 ```
