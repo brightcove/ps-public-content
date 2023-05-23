@@ -38,3 +38,7 @@ python3 cse_insights_update.py -env=us2 -accessid XXXXX -accesskey XXXXX -filter
 ```
 python3 cse_insights_update.py -accessid XXXXX -accesskey XXXXX -filter '-status:"closed" -tag:"CUSTOM"' -comment 'Valid traffic that has since been tuned out. Closing out.' -status 'closed' -resolution 'Duplicate'
 ```
+### Just new insights, w/o any tag
+```
+python3 cse_insights_update.py -accessid XXXXX -accesskey XXXXX -filter '+status:"new"' -comment 'Valid traffic that has since been tuned out. Closing out.' -status 'closed' -resolution 'No Action'
+```
